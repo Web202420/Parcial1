@@ -55,3 +55,5 @@ Esta es una aplicación web en React diseñada como un MVP (Producto Mínimo Via
 
 ## Consideraciones finales
 Este README incluye los pasos básicos para la instalación, ejecución y un resumen de las decisiones de diseño. Recuerde otorgar permisos temporales al API antes de intentar correr el proyecto.
+
+`Autor`: [wareval0](ttps://github.com/wareval0)
