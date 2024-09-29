@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Proyecto Triatlón App - Parcial 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Esta es una aplicación web en React diseñada como un MVP (Producto Mínimo Viable) para registrar tiempos de entrenamiento en ciclismo, natación y trote. El profesor Camilo está entrenando para un triatlón, y la aplicación permite registrar y mostrar los tiempos de sus entrenamientos, junto con la opción de hacerlo para otros usuarios.
 
-## Available Scripts
+## Funcionalidades
+- **Login:** Página para iniciar sesión con validación de correo y contraseña.
+- **Home:** Pantalla principal con el resumen del perfil del usuario (mejores tiempos y foto de perfil) y registros de actividades deportivas.
+- **Detalle de Ejercicio:** Modal que muestra información ampliada de cada actividad registrada.
 
-In the project directory, you can run:
+## Componentes principales
+1. **Login.js:** Componente de la página de inicio de sesión, donde se solicitan las credenciales del usuario (correo y contraseña) con validación.
+2. **Home.js:** Componente que muestra los registros de ciclismo, trote y natación. Incluye una sección con el perfil del usuario y sus mejores tiempos.
+3. **Card.js:** Componente que representa las tarjetas de los registros deportivos.
+4. **Modal:** Al hacer clic en un registro, se abre un modal que muestra los detalles del registro seleccionado.
 
-### `npm start`
+## Instrucciones para correr el proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerrequisitos
+- Tener instalado Node.js y npm.
+- Dar permisos de acceso temporal a la API:
+  1. Ir a [https://cors-anywhere.herokuapp.com](https://cors-anywhere.herokuapp.com)
+  2. Hacer clic en el botón "Request temporary access to the demo server" para permitir las peticiones de API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Instalación
+1. Clonar este repositorio:
+   ```bash
+   git clone https://github.com/Web202420/Parcial1.git
+   cd Parcial1
+   ```
 
-### `npm test`
+2. Instalar las dependencias:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Ejecutar la aplicación:
+   ```bash
+   npm start
+   ```
 
-### `npm run build`
+4. Abrir el navegador en [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Decisiones de diseño y desarrollo
+1. **Internacionalización (I18N):** Se implementó soporte para inglés y español usando la biblioteca `react-intl`. Se crearon archivos de traducción (`es.json` y `en.json`) en la carpeta `locales` y se utiliza el componente `IntlProvider` para administrar el idioma en función de la configuración del navegador.
+2. **Estilos y Responsividad:** Se usó `Bootstrap` para la estilización de la aplicación. Las tarjetas de registro no son responsive según lo solicitado en el enunciado.
+3. **Mock de datos:** Se usaron dos servicios para obtener datos ficticios. La API de Mockaroo para los registros deportivos y un Gist de GitHub para los datos del usuario.
+4. **Componentes reutilizables:** Se modularizaron componentes como `RegisterCard` para reutilizarlos en las diferentes secciones deportivas (ciclismo, trote, natación).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Librerías utilizadas
+- **React:** Framework principal para el desarrollo de la interfaz.
+- **Bootstrap:** Para los estilos y la estructura visual.
+- **react-intl:** Para manejar la internacionalización.
+- **Fetch API:** Para obtener datos de las APIs de Mockaroo y GitHub.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Consideraciones finales
+Este README incluye los pasos básicos para la instalación, ejecución y un resumen de las decisiones de diseño. Recuerde otorgar permisos temporales al API antes de intentar correr el proyecto.

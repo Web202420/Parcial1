@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Form, Button } from "react-bootstrap";
+import { FormattedMessage } from "react-intl";
 
 function Login() {
     const navigate = useNavigate();
@@ -60,11 +61,11 @@ function Login() {
         >
             <Container>
                 <div className="d-flex justify-content-center align-items-center my-5">
-                    <div style={{ width: '25rem', backgroundColor: "white", borderRadius: ".375rem", padding: ".375rem .75rem" }}>
-                        <p className="fs-3 fw-semibold">Log in</p>
+                    <div style={{ width: '25rem', backgroundColor: "white", borderRadius: ".375rem", padding: ".575rem .95rem" }}>
+                        <p className="fs-3 fw-semibold mt-2"><FormattedMessage id="logIn"/></p>
                         <Form noValidate validated={validated} onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Email</Form.Label>
+                                <Form.Label><FormattedMessage id="email"/></Form.Label>
                                 <Form.Control 
                                     type="email" 
                                     value={email} 
@@ -78,7 +79,7 @@ function Login() {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                                <Form.Label>Contraseña</Form.Label>
+                                <Form.Label><FormattedMessage id="password"/></Form.Label>
                                 <Form.Control 
                                     type="password" 
                                     value={password} 
@@ -91,9 +92,9 @@ function Login() {
                                 </Form.Control.Feedback>
                             </Form.Group>
 
-                            <span className="d-flex justify-content-start">
+                            <span className="d-flex justify-content-start mb-2">
                                 <Button className="p-2" variant="primary" type="submit" style={{ width: "60%" }}>
-                                    Log in
+                                    <FormattedMessage id="logIn"/>
                                 </Button>{' '}
                             </span>
                         </Form>

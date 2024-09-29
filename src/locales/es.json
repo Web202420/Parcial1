@@ -1,0 +1,13 @@
+{
+    "logIn": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "cycling": "Ciclismo",
+    "cyclingSession": "Sesión de ciclismo",
+    "running": "Correr",
+    "runningSession": "Sesión de correr",
+    "swimming": "Natación",
+    "swimmingSession": "Sesión de natación",
+    "close": "Cerrar",
+    "cardText": "Recorrido alrededor de la bahia de "
+}

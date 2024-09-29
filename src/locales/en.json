@@ -1,0 +1,13 @@
+{
+    "logIn": "Log in",
+    "email": "Email",
+    "password": "Password",
+    "cycling": "Cycling",
+    "cyclingSession": "Cycling session",
+    "running": "Running",
+    "runningSession": "Running session",
+    "swimming": "Swimming",
+    "swimmingSession": "Swimming session",
+    "close": "Close",
+    "cardText": "Tour around the bay of "
+}
